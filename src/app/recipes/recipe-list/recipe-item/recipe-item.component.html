@@ -1,0 +1,13 @@
+<a 
+routerLink="" 
+class="list-group-item clearfix p-2"
+(click)="toDetail()"
+>
+  <div class="float-left">
+    <h5 class="list-group-item-heading">{{ recipe.name.length > 23 ? recipe.name.slice(0, 20) + "..." : recipe.name }} </h5>
+    <p class="list-group-item-text">{{ recipe.description | slice:0:30 }}...</p>
+  </div>
+  <span class="float-right">
+    <img [src]="recipe.imagePath" alt="" class="img-responsive float-right" width="120">
+  </span>
+</a>
