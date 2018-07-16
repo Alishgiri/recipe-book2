@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,9 @@ export class HeaderComponent implements OnInit {
   @Output() selectedNav = new EventEmitter<string>();
   isCollapsed = false;
 
-  constructor() { }
+  constructor(private dropdownConfig: NgbDropdownConfig) {
+    this.dropdownConfig.placement = 'bottom-right';
+  }
 
   ngOnInit() {
   }
